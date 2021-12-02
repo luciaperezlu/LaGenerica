@@ -1,0 +1,42 @@
+<%- include ('./template/cabecera', {titulow:'clientes'}); %>
+    <!--Es un include de cabecera.ejs que tiene el head se llama 
+    como un ruta relativa-->
+    <h1 align="center" class="text-light bg-dark">Clientes</h1>
+
+    <div class="container">
+    
+
+    <table class="table table-hover table-sm text-white">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Cedula</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Email</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+          </tr>
+        </thead>
+        <tbody>  
+              <% if (arrayClientes.length> 0) { %>  <!-- Si hay informacion que es mayor a cero mostrar-->
+                <% arrayClientes.forEach (clientes=> { %>
+                    <tr>
+                        <th scope="row"><%= clientes.id %></th> <!--Se  trae el primer dato de ID -->
+                        <td><%= clientes.cedula_cliente %> </td>
+                        <td><%= clientes.direccion_cliente %> </td>
+                        <td><%= clientes.email_cliente %></td>
+                        <td><%= clientes.nombre_cliente %></td>
+                        <td><%= clientes.telefono_cliente%></td>
+                     </tr>
+        
+                    
+                    <% }) %>
+                        <% } %>
+
+        
+        </tbody>
+      </table>   
+      </div>         
+
+<%- include ('./template/footer'); %>
+ <!--Es un include de footer.ejs que tiene el head se llama como un ruta relativa-->

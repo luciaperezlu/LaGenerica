@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" REL="StyleSheet"> <!--Se llama la carpeta public desde app.js desde dirname public
+    css bootstrap.css tiene una ruta absoluta es decir no tiene ./css/bootstrap.css (con punto es ruta relativa)-->
+    <title>Páginas Dinámicas <%= titulow %> </title>  <!--convertir titulo en un objeto para poderlo usar en las otras paginas-->
+</head>
+<body class="bg-dark text-white" > <!--Se quitan todos los body de las otras páginas-->
+
+
+    <%- include ("navbar") %> <!--Se incluye el navbar.ejs que es el menu de navegación a todas las paginas  -->

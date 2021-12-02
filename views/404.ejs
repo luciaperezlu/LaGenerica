@@ -1,0 +1,11 @@
+<%- include ('./template/cabecera', {titulow:'404'}); %> <!--Es un include de cabecera.ejs que tiene el head se llama 
+como un ruta relativa-->
+
+    <h1 align="center">Error</h1>
+    <h2 align="center">
+         <%= titulo %> </h2> <!--Llama el comentario json que aparece en app.js llamado titulos-->
+    <h2 align="center"> 
+        <%= descripcion %> </h2> <!--Llama el comentario json que aparece en app.js llamado descripcion-->
+
+<%- include ('./template/footer'); %> <!--Es un include de footer.ejs que tiene el head se llama 
+    como un ruta relativa-->

@@ -1,0 +1,46 @@
+
+<%- include ('./template/cabecera', {titulow:'productos'}); %> <!--Es un include de cabecera.ejs que tiene el head se llama 
+    como un ruta relativa-->
+
+   
+    <h1 align="center" class="text-light bg-dark">Lista de Productos</h1>
+
+    <div class="container">
+    
+
+    <table class="table table-hover table-sm text-white">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Código Producto</th>
+            <th scope="col">Iva Compra</th>
+            <th scope="col">Nit Proveedor</th>
+            <th scope="col">Nombre Producto</th>
+            <th scope="col">Precio Compra</th>
+            <th scope="col">Precio Venta</th>
+          </tr>
+        </thead>
+        <tbody>  
+              <% if (arrayProductos.length> 0) { %>  <!-- Si hay informacion que es mayor a cero mostrar-->
+                <% arrayProductos.forEach (productos=> { %>
+
+                    <tr>
+                        <th scope="row"><%= productos.id %></th> <!--Se  trae el primer dato de ID -->
+                        <td><%= productos.codigo_producto %> </td>
+                        <td><%= productos.ivacompra %> </td>
+                        <td><%= productos.nitproveedor %></td>
+                        <td><%= productos.nombre_producto %></td>
+                        <td><%= productos.precio_compra%></td>
+                        <td><%= productos.precio_venta%></td>
+                      </tr>
+        
+                    
+                    <% }) %>
+                        <% } %>
+        </tbody>
+      </table>   
+      </div>         
+
+
+<%- include ('./template/footer'); %> <!--Es un include de footer.ejs que tiene el head se llama 
+    como un ruta relativa-->
